@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="login-box">
+
+{%if (message) %}
+    {{message}}
+{% endif %}
+{% for inscription in lesInscriptions %}
+    <B>Employé concerné : {{ inscription.lEmploye.nom }}</B><br>
+    Formation souhaité : {{ inscription.laFormation.leProduit.libelle }}<br>
+    Etat actuel de la demande : {{ inscription.statut }}<br><br>
+
+{% endfor %}
+
+</div>
+{% endblock %}

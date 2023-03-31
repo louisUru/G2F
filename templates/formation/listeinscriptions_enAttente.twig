@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="login-box">
+
+{%if (message) %}
+    {{message}}
+{% endif %}
+{% for inscription in lesInscriptions %}
+    <B>Employé concerné : {{ inscription.lEmploye.nom }}</B><br>
+    Formationss souhaité : {{ inscription.laFormation.leProduit.libelle }}<br>
+    Etat actuel de la demande : {{ inscription.statut }}<br>
+    <button> <a href="{{path('app_inscription_valider', {'id':inscription.id})}}">Valider</a></button>
+    <button><a href="{{path('app_inscription_refuser', {'id':inscription.id})}}">Refuser</a></button><br><br>
+{% endfor %}
+
+</div>
+{% endblock %}

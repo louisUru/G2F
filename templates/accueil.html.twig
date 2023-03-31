@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Welcome to G2F{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
+    </head>
+    <style>
+    body {
+        background-image: url(https://static.vecteezy.com/system/resources/previews/002/129/438/non_2x/black-background-with-glow-and-shadow-panorama-vector.jpg);
+    }
+    .login-box {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    padding: 60px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+    }
+     .login-box form a {
+    padding: 10px 10px;
+    font-size: 20px;
+    font-family: "Verdana",sans-serif;
+    border-radius: 10px;
+    }
+</style>
+    <body>
+        <div class="login-box">
+        <img style="text-align: center;" src={{asset('media/logo.png')}} width=500> 
+         <h2 style="font-size:75px;">Bienvenue</h2>
+         <form>
+         <p style="text-align:center;">
+         <a href="{{path('app_Inscription')}}">
+        SE CONNECTER</a></br>
+        </form>
+    </body>
+</html>

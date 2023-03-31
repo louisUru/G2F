@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="login-box">
+<h2>Inscriptions en attente :</h2> <br><br>
+{% for form in lesInscriptions %}
+        <B>Employé concerné : {{ form.lemploye.nom }}</B><br>
+        Formation souhaité : {{ form.laFormation.leProduit.libelle }}<br>
+        Etat actuel de la demande : {{ form.statut }}<br>
+        <form>
+        <a href="{{path('app_checkEmployeId', {'id':form.id})}}">Modifier </a> <br>
+        </form>
+        <br>
+{% endfor %}
+</div>
+{% endblock %}

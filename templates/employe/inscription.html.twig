@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="login-box">
+ {% form_theme form 'form_table_layout.html.twig' %}
+    {{ form(form)}}
+</div>
+
+
+{% endblock %}

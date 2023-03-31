@@ -1,0 +1,9 @@
+<h1>Formations :</h1>
+{% for formation in lesFormations %}
+    <B>Thème : {{ formation.leProduit.libelle }}</B><br>
+    Date de début : {{ formation.dateDebut|date("d/m/Y") }}<br>
+    Heures de travail : {{ formation.nbreHeures }}<br>
+    Service / Département concerné : {{ formation.departement }}<br>
+    <a href="{{path('formation_supprimer', {'id':formation.id})}}">Supprimer</a><br><br>
+{% endfor %}
+<a href="{{path('formation_ajouter')}}">Ajouter une formation</a><br><br>

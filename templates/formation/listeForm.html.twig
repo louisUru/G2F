@@ -1,0 +1,9 @@
+Votre liste de formation : <br> <br>
+{% if (message) %}
+    {{message}}
+{% endif %}
+{% for insc in ensInscs %}
+    Département : <b> {{ insc.laFormation.departement }}</b><br>
+    Formation Inscrite : <b>{{ insc.laFormation.leProduit.libelle }}</b><br>
+    Statut :<b>{{insc.statut}}</b><br><br>
+{% endfor %}

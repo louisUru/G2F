@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="login-box">
+
+
+Voici la liste des employés: </br></br>
+{%if (message) %}
+    {{message}}
+{% endif %}
+
+{% for employe in lesEmployes %}
+      <b> Nom de l'employé : </b> {{employe.Nom}}</br>
+      <b> Prénom de l'employé : </b>{{employe.prenom}}</br>
+      <b> Son Statut : </b>{{employe.Statut}}</br>
+      <form> <a href="{{path('app_affInscriptionEmpId', {'id': employe.id})}}">Afficher les inscriptions de cet employé</a></form></br>
+
+{% endfor %}
+</div>
+{% endblock %}

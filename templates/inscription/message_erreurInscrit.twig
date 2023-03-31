@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="login-box">
+
+{% if (message) %}
+    {{ message }}
+{% endif %}<br>
+<button> <a href="{{path("app_liste_FormationEmp")}}">Revenir en arrière</a></button><br><br>
+
+
+</div>
+{% endblock %}
